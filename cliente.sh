@@ -24,7 +24,7 @@ echo "LSTP_1 $IP_CLIENT" | nc $IP_SERVER $PORT
 
 echo "2. LISTEN OK_HEADER"
 
-DATA=nc -1 $PORT`
+DATA=`nc -1 $PORT`
 
 echo "6. CHECK OK_HEADER"
 
@@ -63,7 +63,7 @@ echo "FILE_NAME $FILE_NAME" | nc $IP_SERVER $PORT
 
 echo "8. LiISTEN OK_FILE_NAME"
 
-DATA= nc -1 SPORT`
+DATA=`nc -1 SPORT`
 
 if [ "$DATA" != "OK_FILE_NAME" ]
 then
@@ -96,7 +96,7 @@ echo "FILE_DATA_MD5 $MD5" | nc $IP_SERVER $PORT
 
 echo "17. LISTEN OK/KO_FILE_DATA_MD5"
 
-DATA= nc -1 $PORT`
+DATA=`nc -1 $PORT`
 
 echo "19. CHECK OK/OK_FILE_DATA_MD5"
 
